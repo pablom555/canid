@@ -1,4 +1,4 @@
-# Bowery
+# Canid
 
 Canid Challenge Calendar Vaccination
 
