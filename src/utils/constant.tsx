@@ -1,4 +1,4 @@
-import { ICalendarColumn } from "../interface/common";
+import { ICalendarColumn } from "../types";
 
 export const title =
   "Immunization Dosing Chart for Infants to Preschool-Aged Children";

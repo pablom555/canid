@@ -1,7 +1,7 @@
 import React from "react";
 import CalendarVaccination from "./components/CalendarVaccination";
-import { calendarColumns, title, vaccines } from "./config/constant";
-import { patientVaccinations } from "./config/data";
+import { calendarColumns, title, vaccines } from "./utils/constant";
+import { patientVaccinations } from "./utils/data";
 
 function App() {
   return (

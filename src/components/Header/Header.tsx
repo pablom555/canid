@@ -1,5 +1,5 @@
 import React from "react";
-import { IHeader } from "../interface/common";
+import { IHeader } from "./header.types";
 
 const Header = ({ text }: IHeader) => {
   return (

@@ -1,13 +1,7 @@
 import React from "react";
-import { vaccines } from "../config/constant";
-import { IDosePatient, IMapping, ITable } from "../interface/common";
-
-const roundedRangeMap: IMapping = {
-  S: "rounded-l-full ml-1",
-  E: "rounded-r-full mr-1",
-  M: "rounded-none",
-  "S-E": "rounded-full w-11/12 m-auto",
-};
+import DosePill from "./DosePill";
+import RangeBackGround from "./RangeBackGround";
+import { ITable } from "./table.types";
 
 const Table = ({ columns, rows, data }: ITable) => {
   return (
@@ -50,23 +44,22 @@ const Table = ({ columns, rows, data }: ITable) => {
                             index === 0
                               ? "bg-gray-100 text-left text-xl font-bold p-3"
                               : "w-40 border-r-2 p-0 border-gray-200"
-                          } align-middle whitespace-nowrap`}
+                          } align-middle whitespace-nowrap `}
                         >
                           {range ? (
-                            <span
-                              className={`bg-${row.color}-100 block h-2/4 ${roundedRangeMap[range]}`}
-                            >
+                            
+                            <RangeBackGround color={row.color} direction={range} >  
                               {dosesPatient && dose && (
-                                <span
-                                  className={`bg-${row.color}-400 h-full flex rounded-full w-10/12 justify-center items-center`}
-                                >
-                                  {dose.doseName}
-                                </span>
+                                <DosePill color={row.color} text= {dose.doseName} isRangeRecomendation={true} />
                               )}
-                            </span>
-                          ) : (
+                            </RangeBackGround>
+                         
+                          ) :  dosesPatient && dose ? (
+                            <DosePill color={row.color} text= {dose.doseName} isRangeRecomendation={false} />
+                          ) :
                             row[column.accesor]
-                          )}
+                          }
+                            
                         </th>
                       );
                     })}

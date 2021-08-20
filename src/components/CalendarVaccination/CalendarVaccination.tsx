@@ -1,7 +1,8 @@
 import React from "react";
-import { ICalendarVaccination } from "../interface/common";
-import Header from "./Header";
-import Table from "./Table";
+
+import { ICalendarVaccination } from "./calendarVaccination.types";
+import Header from "./../Header";
+import Table from "./../Table";
 
 const CalendarVaccination = ({title, calendarColumns, vaccines, patientVaccinations} : ICalendarVaccination) => {
   return (

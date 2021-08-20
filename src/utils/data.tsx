@@ -1,4 +1,4 @@
-import { IDosePatient } from "../interface/common";
+import { IDosePatient } from "../types";
 
 export const patientVaccinations: IDosePatient = {
   patientId: 1,
@@ -9,6 +9,7 @@ export const patientVaccinations: IDosePatient = {
         { range: "rangeOne", doseName: "1st dose" },
         { range: "rangeTwo", doseName: "2st dose" },
         { range: "rangeFive", doseName: "3st dose" },
+        { range: "rangeFour", doseName: "3st dose" },
       ],
     },
     {
